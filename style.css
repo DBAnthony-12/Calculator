@@ -1,63 +1,107 @@
-body{
+body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: rgb(199, 199, 199);
-} 
+}
 
-#calculator{
+h1 {
+    text-align: center;
+    font-size: 1.5rem; /* Adjusted for smaller size */
+}
+
+#calculator {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(186, 248, 245);
     border-radius: 15px;
-    max-width: 500px;
+    max-width: 300px; /* Adjusted for smaller size */
     overflow: hidden;
 }
 
-#display{
+#display {
     width: 100%;
-    padding: 20px;
-    font-size: 5rem;
-    text-align: left;
+    padding: 15px; /* Adjusted for smaller size */
+    font-size: 2rem; /* Adjusted for smaller size */
+    text-align: right; /* Adjusted alignment */
     border: none;
     background-color: rgb(224, 224, 250);
-    color: white;
-
+    color: black; /* Adjusted for better visibility */
 }
 
-#keys{
+#keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
-    padding: 25px;
+    padding: 15px; /* Adjusted for smaller size */
 }
 
-button{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+button {
+    width: 60px; /* Adjusted for smaller size */
+    height: 60px; /* Adjusted for smaller size */
+    border-radius: 30px; /* Adjusted for smaller size */
     border: none;
-    background-color:rgba(194, 190, 190, 0.671);
-    color: white;
-    font-size: 3rem;
+    background-color: rgba(194, 190, 190, 0.671);
+    color: black; /* Adjusted for better visibility */
+    font-size: 1.5rem; /* Adjusted for smaller size */
     font-weight: bold;
     cursor: pointer;
 }
 
-button:hover{
-    background-color:rgb(136, 200, 238);
-}
-button:active{
-    background-color:rgb(136, 200, 225);
+button:hover {
+    background-color: rgb(136, 200, 238);
 }
 
-.operator-btn{
-    background-color: orange; 
+button:active {
+    background-color: rgb(136, 200, 225);
 }
-.operator-btn:hover{
-    background-color: rgb(248, 209, 135); 
+
+.operator-btn {
+    background-color: orange;
 }
-.operator-btn:active{
-    background-color: rgb(247, 217, 163); 
+
+.operator-btn:hover {
+    background-color: rgb(248, 209, 135);
+}
+
+.operator-btn:active {
+    background-color: rgb(247, 217, 163);
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    #calculator {
+        max-width: 250px;
+    }
+
+    #display {
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #calculator {
+        max-width: 200px;
+    }
+
+    #display {
+        padding: 8px;
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        font-size: 1rem;
+    }
 }
